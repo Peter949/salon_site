@@ -3,8 +3,9 @@ import styles from './Shop.module.css'
 
 function Shop()
 {
-    const btn_add = <Button text='В корзину' add_style={styles.btn_style}/>;
-    
+    const btn_add = <Button text='В корзину' add_style={styles.btn_add}/>;
+    const btn_korzina = <Button text='Корзина' add_style={styles.btn_korzina}/>;
+    const btn_catalog = <Button text='...' add_style={styles.btn_catalog}/>
     return(
         <div className={styles.div}>
             <div className={styles.products}>
@@ -22,7 +23,9 @@ function Shop()
                 </div>
             </div>
             <div className={styles.wish_list}>
-
+                {btn_korzina}
+                <p className={styles.p_catalog}>Каталог</p>
+                {btn_catalog}
             </div>
         </div>
     )

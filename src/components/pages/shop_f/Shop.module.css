@@ -2,6 +2,7 @@
 {
     display: flex;
     flex-direction: row;
+    width: 100%;
 }
 .products
 {
@@ -23,10 +24,31 @@
 {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    margin-left: auto;
+
+    height: 100%;
+    width: 500px;
 
     background-color: #BFAAAA;
 }
-.btn_style
+.btn_add{
+    background-color: #FFFFFF;
+    border: 1px solid black;
+}
+.btn_korzina
+{
+    margin-top: 77px;
+    background-color: #FFFFFF;
+    border: 1px solid black;
+}
+.p_catalog
+{
+    margin-top: 140px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 40px;
+}
+.btn_catalog
 {
     background-color: #FFFFFF;
     border: 1px solid black;
