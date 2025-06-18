@@ -1,0 +1,22 @@
+.p
+{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 40px;
+}
+.div
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+
+    height: 120px;
+    background-color: #FFFFFF;
+    
+    gap: 272px;
+}
+.img
+{
+    width: 109px;
+    height: 109px;
+}

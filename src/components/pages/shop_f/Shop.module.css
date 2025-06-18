@@ -1,0 +1,33 @@
+.div
+{
+    display: flex;
+    flex-direction: row;
+}
+.products
+{
+    display: flex;
+    flex-direction: column;
+
+    margin-top: 20px;
+    margin-left: 111px;
+}
+.product
+{
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+    margin-top: 57px;
+}
+.wish_list
+{
+    display: flex;
+    flex-direction: column;
+
+    background-color: #BFAAAA;
+}
+.btn_style
+{
+    background-color: #FFFFFF;
+    border: 1px solid black;
+}

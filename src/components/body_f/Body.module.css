@@ -1,0 +1,7 @@
+.div
+{
+    display: flex;
+    overflow-x: auto;
+    background-color: #FFE3E3;
+    flex-grow: 1;
+}

@@ -1,0 +1,17 @@
+.div
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: right;
+    margin-right: 90px;
+
+    height: 120px;
+
+    gap: 90px;
+}
+.p
+{
+    font-size: 40px;
+    font-family: 'Times New Roman', Times, serif;
+}
