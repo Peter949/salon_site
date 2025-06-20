@@ -23,6 +23,11 @@
     align-items: center;
     margin-top: 57px;
 }
+.p_product
+{
+    font-size: 30px;
+    font-family: 'Times New Roman', Times, serif;
+}
 .wish_list
 {
     display: flex;
@@ -37,6 +42,7 @@
 .btn_add{
     background-color: #FFFFFF;
     border: 1px solid black;
+    margin-left: 15px;
 }
 .btn_korzina
 {
@@ -54,4 +60,10 @@
 {
     background-color: #FFFFFF;
     border: 1px solid black;
+}
+.img
+{
+    width: 100px;
+    height: 100px;
+    margin-right: 15px;
 }

@@ -11,3 +11,11 @@
 
     gap: 38px;
 }
+.btn_style
+{
+    background-color: #D9D9D9;
+}
+.active_btn_style
+{
+    background-color: #A3FFB7;
+}
