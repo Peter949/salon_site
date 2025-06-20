@@ -5,7 +5,7 @@ import Footer from './components/footer_f/Footer';
 import Body from './components/body_f/Body';
 
 
-function App() {
+const App = () => {
   return (
     <div className='App'>
       <Header/>

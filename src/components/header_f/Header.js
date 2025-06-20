@@ -1,7 +1,7 @@
 import styles from './Header.module.css'
 import scissorsImg from '../../assets/scissors.png'
 
-function Header()
+const Header = () =>
 {
     return(
         <div className={styles.div}>

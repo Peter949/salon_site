@@ -1,7 +1,7 @@
 import Button from '../button_f/Button';
 import styles from './Navigator.module.css'
 
-function Navigator()
+const Navigator = () =>
 {
     function click(page_name)
     {

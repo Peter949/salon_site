@@ -1,7 +1,7 @@
 import Shop from "../pages/shop_f/Shop";
 import styles from './Body.module.css'
 
-function Body()
+const Body = () =>
 {
     return(
         <div className={styles.div}>
