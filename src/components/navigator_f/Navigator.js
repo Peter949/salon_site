@@ -5,7 +5,7 @@ import { useState } from 'react';
 const Navigator = () =>
 {
     const btn_name_arr = ["Магазин", "Парикмахеры", "Запись на прием", "Все прически", "Личный кабинет"];
-    const [btn_state, setBtnState] = useState(['Магазин']);
+    const [btn_state, setBtnState] = useState(["Магазин"]);
 
     const btn_styles = [styles.btn_style, styles.btn_style, styles.btn_style, styles.btn_style, styles.btn_style];
 
@@ -30,7 +30,7 @@ const Navigator = () =>
     
     const btn_arr = btn_name_arr.map((name, index) => (
         <Button 
-            //key={name} 
+            key={name} 
             text={name} 
             add_style = {btn_styles[index]}
             onClick={() => setBtnState(name)}
