@@ -5,13 +5,23 @@ import { useEffect, useState } from 'react'
 
 const Shop = (props) =>
 {
-    
-    
-    const btn_add = <Button text='В корзину' add_style={styles.btn_add}/>;
-    const btn_korzina = <Button text='Корзина' add_style={styles.btn_korzina}/>;
+
+    /*
+    props.korzina
+    props.set_v_korzinu
+    */
+
+        
+    const addKorzina = (product_id) =>
+    {
+        props.set_v_korzinu(arr => [...arr, product_id]);
+    }
+
+
+    const btn_korzina = <Button text='Корзина' add_style={styles.btn_korzina}
+    onClick={() => props.setKorzina(true)}/>;
     const btn_catalog_non = <Button text='...' add_style={styles.btn_catalog} 
     onClick={() => props.setCatalog(true)}/>;
-
     const btn_catalog_active = <Button text='Отменить' add_style={styles.btn_catalog} 
     onClick={() => props.setStateShop(false)}/>;
     const [products, setProducts] = useState([]);
@@ -45,7 +55,8 @@ const Shop = (props) =>
                             {/* <img src={item.images} className={styles.img}/> */}
                             {<img src={item.thumbnail} className={styles.img}/>}
                             {item.image} <p className={styles.p_product}>{item.title} | ${item.price}</p>
-                            {btn_add}
+                            <Button text='В корзину' add_style={styles.btn_add}
+                            onClick = {() => addKorzina(item.id)}/>
                         </div>
                     </div>
                 ))}
