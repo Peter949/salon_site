@@ -1,4 +1,4 @@
-import './App.css';
+import styles from './App.module.css';
 import Header from './components/header_f/Header';
 import Navigator from './components/navigator_f/Navigator';
 import Footer from './components/footer_f/Footer';
@@ -25,7 +25,7 @@ const App = () => {
     setCatalog(value);
   }
   return (
-    <div className='App'>
+    <div className={styles.App}>
       {isCatalogOpen && (<Catalog methods={[updateCatalog, updateShop, updateProducts]}/>
       )}
       <Header/>
