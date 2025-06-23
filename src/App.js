@@ -10,17 +10,28 @@ import { useState } from 'react';
 
 const App = () => {
   const [isCatalogOpen, setCatalog] = useState(false);
+  const [catalogStateShop, setStateShop] = useState(false);
+  const [catalogProducts, setProducts] = useState([])
+  const updateProducts = (value) =>
+  {
+    setProducts(value);
+  }
+  const updateShop = (value) =>
+  {
+    setStateShop(value)
+  }
   const updateCatalog = (value) =>
   {
     setCatalog(value);
   }
   return (
     <div className='App'>
-      {isCatalogOpen && (<Catalog method={updateCatalog}/>
+      {isCatalogOpen && (<Catalog methods={[updateCatalog, updateShop, updateProducts]}/>
       )}
       <Header/>
       <Navigator/>
-      <Body states={[isCatalogOpen]} methods={[updateCatalog]}/>
+      <Body states={[isCatalogOpen, catalogStateShop, catalogProducts]} 
+            methods={[updateCatalog, updateShop]}/>
       <Footer/>
     </div>
   );

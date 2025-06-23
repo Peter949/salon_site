@@ -6,7 +6,10 @@ const Body = (props) =>
 {
     return(
         <div className={styles.div}>
-            <Shop catalogState={props.states[0]} setCatalog={props.methods[0]}/>
+            <Shop catalogState={props.states[0]} setCatalog={props.methods[0]}
+            catalogStateShop={props.states[1]} catalogProducts={props.states[2]}
+            setStateShop={props.methods[1]}
+            />
         </div>
     )
 }
