@@ -1,6 +1,7 @@
 import Catalog from "../catalog_f/Catalog";
 import Shop from "../pages/shop_f/Shop";
 import styles from './Body.module.css'
+import Input from '../input_f/Input'
 
 const Body = (props) =>
 {
