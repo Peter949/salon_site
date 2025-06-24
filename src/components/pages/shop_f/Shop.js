@@ -12,9 +12,10 @@ const Shop = (props) =>
     */
 
         
-    const addKorzina = (product_id) =>
+    const addKorzina = (product_id, title) =>
     {
         props.set_v_korzinu(arr => [...arr, product_id]);
+        alert("Вы добавили " + title + " в корзину!");
     }
 
 
@@ -56,7 +57,7 @@ const Shop = (props) =>
                             {<img src={item.thumbnail} className={styles.img}/>}
                             {item.image} <p className={styles.p_product}>{item.title} | ${item.price}</p>
                             <Button text='В корзину' add_style={styles.btn_add}
-                            onClick = {() => addKorzina(item.id)}/>
+                            onClick = {() => addKorzina(item.id, item.title)}/>
                         </div>
                     </div>
                 ))}

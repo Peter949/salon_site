@@ -2,8 +2,20 @@ import Button from '../button_f/Button';
 import styles from './Navigator.module.css'
 import { useState } from 'react';
 
-const Navigator = () =>
+const Navigator = (props) =>
 {
+    const [setAccount] = props.methods;
+
+    const btn_listener = (btn_index) =>
+    {
+        //switch
+
+        if(btn_index == 4)
+        {
+            setAccount(true);
+        }
+    }
+
     const btn_name_arr = ["Магазин", "Парикмахеры", "Запись на прием", "Все прически", "Личный кабинет"];
     const [btn_state, setBtnState] = useState(["Магазин"]);
 
@@ -33,7 +45,7 @@ const Navigator = () =>
             key={name} 
             text={name} 
             add_style = {btn_styles[index]}
-            onClick={() => setBtnState(name)}
+            onClick={() => {setBtnState(name); btn_listener(index)}}
         />
     ));
 
