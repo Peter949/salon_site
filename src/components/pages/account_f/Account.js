@@ -88,14 +88,14 @@ const Account = (props) =>
                 <div className={styles.close}>
                     <img src={btn_close} onClick={() => setAccount(false)}/>
                 </div>
-                {!isRegistr && <form className={styles.pre_div_sign} onSubmit={submitSign}>
+                {!isRegistr && <form className={styles.pre_div_sign} onSubmit={submitSign} action="#">
                     <p className={styles.p_name_sign}>Войти</p>
                     <p className={styles.p_label_sign}>Введите ваш логин и пароль, или <a href="#" onClick={() => setRegistr(true)}>зарегистрируйтесь</a></p>
                     <Input add_style={styles.input_style} placeholder="Логин" ref={loginRef}/>
                     <Input add_style={styles.input_style} type="password" placeholder="Пароль" ref={passwordRef}/>
                     <Button type="submit" text="Войти" add_style={styles.btn_sign} />
                 </form>}
-                {isRegistr && <form className={styles.pre_div_auth} onSubmit={submitAuth}>
+                {isRegistr && <form className={styles.pre_div_auth} onSubmit={submitAuth} action="#">
                         <p className={styles.p_name_auth}>Регистрация</p>
                         <p className={styles.p_label_auth}>Уже зарегистрированы? <a href="#" onClick={() => setRegistr(false)}>Войти</a></p>
                         <div className={styles.pre2_div_auth}>

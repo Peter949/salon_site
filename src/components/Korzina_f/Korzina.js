@@ -41,6 +41,7 @@ const Korzina = (props) =>
             return acc;
         }, {});
         const countedItems = Object.entries(countMap).map(([value, count]) => ({
+            
             id: value,
             quantity: count,
         }))
@@ -78,6 +79,26 @@ const Korzina = (props) =>
     
     //console.log(db_korzina);
     
+    const buy = () =>
+    {
+        if(props.korzina.length > 0)
+        {
+            let newKorzina = [];
+            updateKorzina(newKorzina);
+            alert("Спасибо за покупку!");
+            setKorzina(false);
+        }
+        else
+        {
+            alert("Добавьте товары в корзину для покупки!");
+        }
+    }
+
+    const delItem = (product_id) =>
+    {
+        let newKorzina = props.korzina.filter(item => item != product_id);
+        updateKorzina(newKorzina);
+    }
 
     return(
         <div className={styles.div}>
@@ -92,16 +113,19 @@ const Korzina = (props) =>
                             <div className={styles.product}>
                                 <p className={styles.p_item}>{item.title}</p>
                                 <p className={styles.p_item}>{item.quantity}</p>
-                                <p className={styles.p_item}>${item.total}</p>
+                                <p className={styles.p_item}>${item.total.toFixed(2)}</p>
                             </div>
                             <div className={styles.pre_btn_ch}>
                                 <img src={btn_minus} className={styles.btn_ch} onClick={() => deleteFromKorzina(item.id)}/>
                                 <img src={btn_plus} className={styles.btn_ch} onClick={() => addFromKorzina(item.id)}/>
                             </div>
+                            <div className={styles.pre_btn_del}>
+                                <Button add_style={styles.btn_del} text="Удалить" onClick={() => delItem(item.id)}/>
+                            </div>
                         </div>
                     )))}
                 </div>
-                <Button text='Купить' add_style={styles.btn_style_buy}/>
+                <Button text='Купить' add_style={styles.btn_style_buy} onClick={buy}/>
             </div>
         </div>
     )

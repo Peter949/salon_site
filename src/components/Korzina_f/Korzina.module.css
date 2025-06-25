@@ -86,3 +86,23 @@
 {
     margin-left: 16px;
 }
+.btn_del
+{
+    font-size: 25px;
+    background-color: #FFFFFF;
+    width: 95px;
+    height: 42px;
+    flex-shrink: 0;
+    border-radius: 15px;
+    border: solid 1px #000000;
+    overflow-x: hidden;
+}
+.pre_btn_del
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    width: 130px;
+}
